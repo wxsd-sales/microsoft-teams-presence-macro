@@ -19,5 +19,13 @@ The Macro requires a Microsoft Graph App to perform its API calls
 2. Take note of the following as you will need them for your Macro
 * ``MFST_APPID`` - The App ID fo the Graph App
 * ``MFST_SECRET`` - The Graph Client Secret of the Graph App
-* ``MFST_TENANT`` - Your Microsoft Tenant domain
+* ``MFST_TENANT`` - Your Microsoft Tenant domain, eg. exampleorg.onmicrosoft.com
+
+## Getting the User ID
+The user ID for these API calls isn't the email address of the user but instead a long alphanumeric string. The easiet way to find your own ID is to use the [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) and click on the 'GET my Profile' link. The ID will be at the bottom of the reponse section on the right:
+
+![image](https://user-images.githubusercontent.com/21026209/161545260-00c8861b-1e58-4052-b944-e88c29a77dc2.png)
+
+Take note of this as you will need to include this to the Macro
+
 * ``MFST_USERID`` - Your end user ID
