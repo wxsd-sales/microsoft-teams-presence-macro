@@ -10,7 +10,7 @@ This Webex Device Macro makes it possible to automatically set your Microsoft Te
 
 ## Setup
 
-1. Configure the Macro Javascript file with the four required parameters at the beginning, additional instructions on where to find these are blow:
+1. Configure the Macro Javascript file ``ms-teams-setpresence.js`` with the four required parameters at the beginning, additional instructions on where to find these are blow:
 * ``MFST_TENANT`` - This is your Microsoft Tenants domain, eg. exampleorg.onmicrosoft.com
 * ``MFST_APPID`` - This is the App ID of your Graph App (see instructions below)
 * ``MFST_SECRET`` - This is the Graph Client Secret of the Graph App (see instructions below)
