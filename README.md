@@ -25,6 +25,23 @@ The Macro requires a Microsoft Graph App to perform its API calls. Follow the st
 
 ![image](https://user-images.githubusercontent.com/21026209/161583122-922273dc-e20f-4fa0-9f48-27995eb0c26b.png)
 
+3. Lastly, you will need to give the App permission to write the presence for your users, go to the A
+
+## Give the App Presence Permissions
+By default the App doesn't have the persmissions to modify the presence for users. You will need to add this permission:
+1. Go to the API Permissions tab and delete the dafault User.Read permission.
+
+![image](https://user-images.githubusercontent.com/21026209/163387262-3d9a7881-f84a-437a-94bc-ae00f55a4811.png)
+
+2. Then click 'Add a permission', select the 'Microsoft Graph' option.
+
+![image](https://user-images.githubusercontent.com/21026209/163387868-2fbfb1e5-52d2-4b10-b5d5-028270480344.png)
+
+3. Search for the 'presence' permission and select the Presence.ReadWrite option and then click 'Add permissions'.
+
+![image](https://user-images.githubusercontent.com/21026209/163388133-fd4dca9a-7ee5-47f0-bcbc-2e153eb6887f.png)
+
+
 
 ## Creating a Client Secret
 In order to use the Graph App, we will need to generate a Client Secret:
@@ -39,6 +56,7 @@ In order to use the Graph App, we will need to generate a Client Secret:
 3. The key in the Value column is our Client Secret, take note of this as it will vanish after you leave this page. Use this for your ``MFST_SECRET`` parameter in the Macro.
 
 ![image](https://user-images.githubusercontent.com/21026209/161585532-4e62555b-c945-47f5-a56a-a9ef8332a5b9.png)
+
 
 
 
