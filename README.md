@@ -27,6 +27,8 @@ The Macro requires a Microsoft Graph App to perform its API calls. Follow the st
 
 3. Lastly, you will need to give the App permission to write the presence for your users, go to the A
 
+
+
 ## Give the App Presence Permissions
 By default the App doesn't have the persmissions to modify the presence for users. You will need to add this permission:
 1. Go to the API Permissions tab and delete the dafault User.Read permission.
@@ -37,9 +39,10 @@ By default the App doesn't have the persmissions to modify the presence for user
 
 ![image](https://user-images.githubusercontent.com/21026209/163387868-2fbfb1e5-52d2-4b10-b5d5-028270480344.png)
 
-3. Search for the 'presence' permission and select the Presence.ReadWrite option and then click 'Add permissions'.
+3. Select the delgrated permissions options and then search for the 'presence' permission and select the Presence.ReadWrite option and then click 'Add permissions'.
 
-![image](https://user-images.githubusercontent.com/21026209/163388133-fd4dca9a-7ee5-47f0-bcbc-2e153eb6887f.png)
+![image](https://user-images.githubusercontent.com/21026209/163388797-4c673211-ef3e-4a5a-bd9c-9d182283dde0.png)
+
 
 
 
