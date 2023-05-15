@@ -1,6 +1,6 @@
 #  Microsoft Teams Presence Macro
  
-This Webex Device Macro makes it possible to automatically set your Microsoft Teams Presence depending on the call state of your device. It leverages the Microsoft Graph API to set the presence of the associated user and monitors the Webex Devices call state using the Cisco xAPIs.
+This Webex Device Macro makes it possible to automatically set your Microsoft Teams Presence depending on the call state of your device. It leverages the Microsoft Graph API to set the presence of the associated user and monitors the Webex Devices call state using the Cisco RoomOS xAPIs.
 
 ![MS-Teams-Presence-Macro](https://user-images.githubusercontent.com/21026209/161542129-cae6671f-f50c-4fe0-9b6f-305a536c9987.png)
 
@@ -10,7 +10,7 @@ This Webex Device Macro makes it possible to automatically set your Microsoft Te
 
 ## Setup
 
-1. Configure the Macro Javascript file ``ms-teams-setpresence.js`` with the four required parameters at the beginning, additional instructions on where to find these are blow:
+1. Configure the Macro JavaScript file ``ms-teams-setpresence.js`` with the four required parameters at the beginning, additional instructions on where to find these are blow:
 * ``MFST_TENANT`` - This is your Microsoft Tenants domain, eg. exampleorg.onmicrosoft.com
 * ``MFST_APPID`` - This is the App ID of your Graph App (see instructions below)
 * ``MFST_SECRET`` - This is the Graph Client Secret of the Graph App (see instructions below)
@@ -30,8 +30,8 @@ The Macro requires a Microsoft Graph App to perform its API calls. Follow the st
 
 
 ## Give the App Presence Permissions
-By default the App doesn't have the persmissions to modify the presence for users. You will need to add this permission:
-1. Go to the API Permissions tab and delete the dafault User.Read permission.
+By default the App doesn't have the permissions to modify the presence for users. You will need to add this permission:
+1. Go to the API Permissions tab and delete the default User.Read permission.
 
 ![image](https://user-images.githubusercontent.com/21026209/163387262-3d9a7881-f84a-437a-94bc-ae00f55a4811.png)
 
@@ -39,7 +39,7 @@ By default the App doesn't have the persmissions to modify the presence for user
 
 ![image](https://user-images.githubusercontent.com/21026209/163387868-2fbfb1e5-52d2-4b10-b5d5-028270480344.png)
 
-3. Select the delgrated permissions options and then search for the 'presence' permission and select the Presence.ReadWrite option and then click 'Add permissions'.
+3. Select the delegated permissions options and then search for the 'presence' permission and select the Presence.ReadWrite option and then click 'Add permissions'.
 
 ![image](https://user-images.githubusercontent.com/21026209/163388797-4c673211-ef3e-4a5a-bd9c-9d182283dde0.png)
 
@@ -48,7 +48,7 @@ By default the App doesn't have the persmissions to modify the presence for user
 
 ## Creating a Client Secret
 In order to use the Graph App, we will need to generate a Client Secret:
-1. Go to the 'Certicates & secrets' section of your app and click 'New client secret'
+1. Go to the 'Certificates & secrets' section of your app and click 'New client secret'
 
 ![image](https://user-images.githubusercontent.com/21026209/161586075-b964c883-af2a-4f5a-95fa-66a191e916cf.png)
 
@@ -64,7 +64,7 @@ In order to use the Graph App, we will need to generate a Client Secret:
 
 
 ## Getting the User ID
-The user ID for these API calls isn't the email address of the user but instead a long alphanumeric string. The easiet way to find your own ID is to use the [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) and click on the 'GET my Profile' link. The ID will be at the bottom of the reponse section on the right:
+The user ID for these API calls isn't the email address of the user but instead a long alphanumeric string. The eaqsiest way to find your own ID is to use the [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) and click on the 'GET my Profile' link. The ID will be at the bottom of the response section on the right:
 
 ![image](https://user-images.githubusercontent.com/21026209/161586596-33cbc311-e5c9-41d2-b835-818ad1581805.png)
 
