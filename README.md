@@ -4,21 +4,29 @@ This Webex Device Macro makes it possible to automatically set your Microsoft Te
 
 ![MS-Teams-Presence-Macro](https://user-images.githubusercontent.com/21026209/161542129-cae6671f-f50c-4fe0-9b6f-305a536c9987.png)
 
-## Requirements
-1. Cisco Webex Device running RoomOS/CE 9.6 or newer
-2. Microsoft Tenant and a Microsoft Graph App
 
 ## Setup
 
+### Prerequisites & Dependencies: 
+
+- Cisco Webex Device running RoomOS/CE 9.6 or later
+- Microsoft Tenant and a Microsoft Graph App
+
+
+<!-- GETTING STARTED -->
+
+### Installation Steps:
 1. Configure the Macro JavaScript file ``ms-teams-setpresence.js`` with the four required parameters at the beginning, additional instructions on where to find these are blow:
 * ``MFST_TENANT`` - This is your Microsoft Tenants domain, eg. exampleorg.onmicrosoft.com
 * ``MFST_APPID`` - This is the App ID of your Graph App (see instructions below)
 * ``MFST_SECRET`` - This is the Graph Client Secret of the Graph App (see instructions below)
 * ``MFST_USERID`` - Your end user ID (see instructions below)
-3. Upload the Macro through your Webex Devices web interface. 
+2. Upload the Macro through your Webex Devices web interface. 
 
 
-## Creating a Microsoft Graph App
+
+
+### Creating a Microsoft Graph App
 The Macro requires a Microsoft Graph App to perform its API calls. Follow the steps below to create one:
 1. Follow this guide [here](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/getting-started/app-registration?view=odsp-graph-online) to setup your App. For mine, I called it Presence App.
 2. After you create your App, on the overview page, you will find you ``Application (client) ID``, use this for the ``MFST_APPID`` parameter in the Macro.
@@ -29,7 +37,7 @@ The Macro requires a Microsoft Graph App to perform its API calls. Follow the st
 
 
 
-## Give the App Presence Permissions
+### Give the App Presence Permissions
 By default the App doesn't have the permissions to modify the presence for users. You will need to add this permission:
 1. Go to the API Permissions tab and delete the default User.Read permission.
 
@@ -46,7 +54,7 @@ By default the App doesn't have the permissions to modify the presence for users
 
 
 
-## Creating a Client Secret
+### Creating a Client Secret
 In order to use the Graph App, we will need to generate a Client Secret:
 1. Go to the 'Certificates & secrets' section of your app and click 'New client secret'
 
@@ -63,7 +71,7 @@ In order to use the Graph App, we will need to generate a Client Secret:
 
 
 
-## Getting the User ID
+### Getting the User ID
 The user ID for these API calls isn't the email address of the user but instead a long alphanumeric string. The eaqsiest way to find your own ID is to use the [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) and click on the 'GET my Profile' link. The ID will be at the bottom of the response section on the right:
 
 ![image](https://user-images.githubusercontent.com/21026209/161586596-33cbc311-e5c9-41d2-b835-818ad1581805.png)
